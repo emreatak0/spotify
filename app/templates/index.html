@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Playlist Mood Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Spotify Playlist Mood Analyzer</h1>
+            <p>Discover the mood and energy of any public Spotify playlist</p>
+        </header>
+        
+        <main>
+            <form id="playlist-form">
+                <div class="input-group">
+                    <label for="playlist-url">Spotify Playlist URL</label>
+                    <input type="url" id="playlist-url" name="playlist_url" 
+                           placeholder="https://open.spotify.com/playlist/..." required>
+                    <button type="submit">Analyze Playlist</button>
+                </div>
+            </form>
+            
+            <div id="loading" class="hidden">
+                <p>Analyzing playlist</p>
+            </div>
+            
+            <div id="result" class="hidden">
+                <h2>Analysis Result</h2>
+                <div id="mood-result"></div>
+            </div>
+            
+            <div class="instructions">
+                <h3>How to use:</h3>
+                <ol>
+                    <li>Make sure the Spotify playlist is public</li>
+                    <li>Copy the playlist URL from Spotify</li>
+                    <li>Paste it in the input field above</li>
+                    <li>Click "Analyze Playlist"</li>
+                </ol>
+                <p><strong>Note:</strong> Private playlists cannot be analyzed.</p>
+            </div>
+        </main>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

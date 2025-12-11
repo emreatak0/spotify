@@ -1,0 +1,153 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #1db954;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #b3b3b3;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group label {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.input-group input {
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background-color: #282828;
+    color: white;
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #1db954;
+}
+
+.input-group button {
+    padding: 12px;
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-group button:hover {
+    background-color: #1ed760;
+}
+
+.hidden {
+    display: none;
+}
+
+#loading {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 30px 0;
+}
+
+#loading p::after {
+    content: '.';
+    animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60%, 100% { content: '...'; }
+}
+
+#result {
+    background-color: #181818;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+#result h2 {
+    color: #1db954;
+    margin-top: 0;
+}
+
+.mood-card {
+    background-color: #282828;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.mood-card h3 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    color: #1db954;
+}
+
+.mood-card.error h3 {
+    color: #ff6b6b;
+}
+
+.mood-description {
+    font-size: 1.1rem;
+    color: #b3b3b3;
+    margin: 15px 0;
+}
+
+.cached {
+    font-style: italic;
+    color: #1db954;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.mood-card.fallback {
+    border: 1px solid #ffcc00;
+    background-color: #282828;
+}
+
+.mood-card.fallback h3 {
+    color: #ffcc00;
+}
+
+.note {
+    font-style: italic;
+    color: #ffcc00;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: rgba(255, 204, 0, 0.1);
+}
